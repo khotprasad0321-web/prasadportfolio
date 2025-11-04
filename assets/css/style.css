@@ -5897,7 +5897,20 @@ header {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+      font-size: 43px;
 }
+    @media only screen and (max-width: 1439.98px) {
+      .about-2__content.right-content .tp_text_invert > div {
+        background-image: linear-gradient(to right, var(--color-2) 50%, #e4e4e4 50%);
+        background-size: 200% 100%;
+        background-position: 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 40px;
+        line-height: 45px;
+    }
+      }
 .about-2__content.right-content .since-year {
   height: 200px;
   margin-top: 65px;
@@ -20939,5 +20952,81 @@ body.modern-agency {
       font-size: 70px;
     }
 }
+
+.about-section {
+      position: relative;
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .about-content {
+      text-align: center;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .about-content h6 {
+      color: #ff6600;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .about-content h2 {
+      font-weight: 700;
+      margin: 20px 0;
+      color: #0a0a0a;
+    }
+
+    .about-content p {
+      color: #666;
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .btn-order {
+      background-color: #e50914;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 5px;
+      font-weight: 600;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn-order:hover {
+      background-color: #b1060f;
+    }
+
+    /* Circular Images */
+    .about-img-left, .about-img-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .about-img-left {
+      left: -100px;
+    }
+
+    .about-img-right {
+      right: -100px;
+    }
+
+    .about-img-left img,
+    .about-img-right img {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 992px) {
+      .about-img-left, .about-img-right {
+        display: none;
+      }
+    }
 
     
