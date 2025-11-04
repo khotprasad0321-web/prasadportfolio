@@ -3390,7 +3390,8 @@ header {
   border-bottom: 1px solid rgba(var(--color-2-rgb), 0.1);
 }
 .hero-two__area {
-  background-color: var(--color-3);
+  /* background-color: var(--color-3); */
+  background-image: url(../images/homebg.jpg);
   overflow: hidden;
   /* height: 100vh; */
   height: auto;
@@ -15336,7 +15337,7 @@ body.home-five p {
   font-size: 17px;
   font-weight: 400;
   line-height: 129.412%;
-  text-transform: lowercase;
+  text-transform: none;
 }
 
 .blog-6.section {
@@ -20929,3 +20930,14 @@ body.modern-agency {
       transform: scale(1.2);
     }
   
+    .mainheadingtext h2 {
+      font-size: 100px;
+    }
+
+    @media only screen and (max-width: 1439.98px) {
+   .mainheadingtext h2 {
+      font-size: 70px;
+    }
+}
+
+    
