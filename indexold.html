@@ -23,7 +23,73 @@
       <link rel="stylesheet" href="assets/css/plugins.css" />
       <link rel="stylesheet" href="assets/css/style.css" />
 
-      
+      <style>
+    
+
+
+    .modal-content {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      backdrop-filter: blur(15px);
+      color: #fff;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    .modal-header {
+      border-bottom: none;
+      text-align: center;
+      display: block;
+    }
+
+    .modal-title {
+      font-weight: 700;
+      font-size: 28px;
+    }
+
+    .modal-body p {
+      color: #cfd8dc;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .form-control {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #fff;
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+
+    .form-control:focus {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 0 0 0.2rem rgba(255,255,255,0.3);
+    }
+
+    .btn-glass {
+      background: linear-gradient(90deg, #00ffcc, #00bfff);
+      border: none;
+      color: #000;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 12px;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .btn-glass:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,255,204,0.4);
+    }
+
+    .credit {
+      text-align: center;
+      color: #cfd8dc88;
+      font-size: 12px;
+      margin-top: 50px;
+    }
+    
+  </style>
    </head>
    <body class="home-two">
       <!-- ================= Preloader Start ================= -->
@@ -72,7 +138,7 @@
          </div>
       </div>
       <!-- ================= Sidebar area end here ================= -->
-      <div id="smooth-wrapper">
+      <div id="smooth-wrapper" style="filter: blur(6px);">
          <div id="smooth-content">
             <!-- ================= Header Section Start ================= -->
             <header class="header-2 section position-absolute top-0 w-100">
@@ -745,75 +811,116 @@
          </div>
       </div>
 
-     <!-- ====== Intro Screen Start ====== -->
-<div id="introScreen" class="intro-screen d-flex align-items-center justify-content-center">
-  <!-- Animated background shapes -->
-  <div class="intro-bg-shape shape-1"></div>
-  <div class="intro-bg-shape shape-2"></div>
-  <div class="intro-bg-shape shape-3"></div>
-
-  <div class="intro-screen-box text-center p-4">
-    <h2 class="intro-screen-title mb-3">Welcome 👋</h2>
-    <p class="intro-screen-sub mb-4">Please tell us a bit about yourself</p>
-
-    <input type="text" id="userName" class="form-control intro-input mb-3" placeholder="Your Name">
-
-    <select id="userType" class="form-select intro-input mb-3 text-white">
-      <option value="">How did you find me?</option>
-      <option value="Friend">Friend</option>
-      <option value="Recruiter">Recruiter</option>
-      <option value="Consultancy">Consultancy</option>
-      <option value="Company HR">Company HR</option>
-    </select>
-
-    <input type="text" id="companyName" class="form-control intro-input mb-3 d-none" placeholder="Enter Company Name">
-
-    <button id="continueBtn" class="btn intro-btn w-100 fw-semibold">Continue</button>
+      <div class="modal fade" id="accessModal" tabindex="-1" aria-labelledby="accessModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4">
+        <div class="modal-header">
+          <h2 class="modal-title" id="accessModalLabel">Welcome, Recruiter 👋</h2>
+        </div>
+        <div class="modal-body">
+          <p>Enter your details to unlock my creative world.</p>
+          <form id="accessForm">
+            <div class="mb-3 text-start">
+              <label for="name" class="form-label">Your Name</label>
+              <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="mb-4 text-start">
+              <label for="email" class="form-label">Mail ID</label>
+              <input type="email" id="email" class="form-control" placeholder="you@example.com" required>
+            </div>
+            <button type="submit" class="btn btn-glass">Continue</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-<!-- ====== Intro Screen End ====== -->
-
-<script>
-  const introScreen = document.getElementById('introScreen');
-  const continueBtn = document.getElementById('continueBtn');
-  const userType = document.getElementById('userType');
-  const companyNameField = document.getElementById('companyName');
-
-  // Show/Hide company name input
-  userType.addEventListener('change', () => {
-    if (userType.value === 'Company HR') {
-      companyNameField.classList.remove('d-none');
-    } else {
-      companyNameField.classList.add('d-none');
-    }
-  });
-
-  // Continue button logic
-  continueBtn.addEventListener('click', () => {
-    const name = document.getElementById('userName').value.trim();
-    const type = userType.value;
-    const company = companyNameField.value.trim();
-
-    if (name === "" || type === "") {
-      alert("Please enter your name and select how you found me.");
-      return;
-    }
-
-    if (type === "Company HR" && company === "") {
-      alert("Please enter your company name.");
-      return;
-    }
-
-    introScreen.classList.add('intro-hide');
-    setTimeout(() => introScreen.remove(), 800);
-  });
-</script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <!-- <a href="https://api.whatsapp.com/send?phone=8689869351&text=Hello Prasad, this is [Your Name], the Hiring Manager from [Company Name]. I came across your profile and would like to discuss a potential opportunity with you. Please let me know a suitable time to connect." class="float" target="_blank">
         <i class="fa fa-whatsapp my-float"></i>
         </a> -->
- 
+
+        <script>
+  (function () {
+    const ACCESS_KEY = 'access_granted_v1';
+
+    // Elements
+    const modalEl = document.getElementById('accessModal');
+    const accessForm = document.getElementById('accessForm');
+    const smoothWrapper = document.getElementById('smooth-wrapper');
+
+    // Helper: remove blur & enable page
+    function showPage() {
+      if (smoothWrapper) {
+        smoothWrapper.style.filter = 'none';
+      }
+    }
+
+    // Helper: apply blur (if needed)
+    function blurPage() {
+      if (smoothWrapper) {
+        smoothWrapper.style.filter = 'blur(6px)';
+      }
+    }
+
+    // Only show modal if user has NOT granted access previously
+    const granted = localStorage.getItem(ACCESS_KEY) === 'true';
+
+    // If not granted, blur page and show modal
+    if (!granted && modalEl && window.bootstrap && typeof bootstrap.Modal === 'function') {
+      blurPage();
+      const modalInstance = new bootstrap.Modal(modalEl, { backdrop: 'static', keyboard: false });
+      modalInstance.show();
+
+      // Form submit: save flag, hide modal, remove blur
+      if (accessForm) {
+        accessForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          // (Optional) read values:
+          // const name = document.getElementById('name').value;
+          // const email = document.getElementById('email').value;
+
+          // Persist that user continued (won't show modal next time)
+          localStorage.setItem(ACCESS_KEY, 'true');
+
+          // Hide bootstrap modal
+          modalInstance.hide();
+
+          // Remove blur and enable page
+          showPage();
+
+          // Optional: remove the modal from DOM to prevent focus traps
+          // setTimeout(() => modalEl.remove(), 500);
+        });
+      }
+    } else {
+      // Already granted — ensure page is normal (no blur) and don't show modal.
+      showPage();
+      // If modal exists and somehow visible, hide it.
+      if (modalEl && window.bootstrap) {
+        const inst = bootstrap.Modal.getInstance(modalEl);
+        if (inst) inst.hide();
+      }
+    }
+  })();
+</script>
+
+ <script>
+    // Always show the modal every time page loads or refreshes
+    window.addEventListener('DOMContentLoaded', () => {
+      const accessModal = new bootstrap.Modal(document.getElementById('accessModal'));
+      accessModal.show();
+    });
+
+    // Form submission handler
+    document.getElementById('accessForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const modalEl = document.getElementById('accessModal');
+      const modal = bootstrap.Modal.getInstance(modalEl);
+      modal.hide();
+      window.location.href = 'index.html'; // Redirect to portfolio
+    });
+  </script>
 
       <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
       <script src="assets/js/vendor/counter.js"></script>
