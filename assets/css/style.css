@@ -21046,6 +21046,15 @@ font-size: 15px;
     top: 20%;
     }
 
+    @media only screen and (max-width: 1439.98px) {
+       .number {
+        font-size: 9rem;
+    font-weight: 800;
+    position: relative;
+    top: 20%;
+    }
+    }
+
     .bubble {
       position: absolute;
       border-radius: 30px;
@@ -21059,8 +21068,35 @@ font-size: 15px;
     left: -10%;
     bottom: 60%;
     animation-delay: 0s;}
+
+    @media only screen and (max-width: 1439.98px) {
+      .bubble1 {
+    background: #ff6600;
+    left: 5%;
+    bottom: 120%;
+    animation-delay: 0s;
+}
+    }
+
+
     .bubble2 { background: #b0ffb4; color: #000; left: 55%; top: 18%; animation-delay: 1s; }
+    @media only screen and (max-width: 1439.98px) {.bubble2 {
+    background: #b0ffb4;
+    color: #000;
+    left: 40%;
+    top: 18%;
+    animation-delay: 1s;
+}}
+
+    
     .bubble3 { background: #9fff00; color: #000; left: 40%; bottom: 37%; animation-delay: 2s; }
+    @media only screen and (max-width: 1439.98px) {.bubble3 {
+    background: #9fff00;
+    color: #000;
+    left: 40%;
+    bottom: -69%;
+    animation-delay: 2s;
+}}
 
     @keyframes float {
       0%, 100% { transform: translateY(0); }
