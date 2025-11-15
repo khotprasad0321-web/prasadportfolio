@@ -21422,7 +21422,7 @@ font-size: 15px;
 
         @media screen and (max-width: 480px) {
  .topsectionpadd {
-          padding-top: 25%;
+          padding-top: 13%;
         }
 }
 .features-card {
@@ -21527,8 +21527,41 @@ font-size: 15px;
   }
   }
 @media screen and (max-width: 480px) {
-  .tabs .nav {
-    justify-content: center;
-    gap: 0.5rem;
-}
-}
+.tabs .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0 1rem;
+    scrollbar-width: none; /* hide scrollbar for Firefox */
+  }
+
+  .tabs .nav::-webkit-scrollbar {
+    display: none; /* hide scrollbar for Chrome/Safari */
+  }
+
+  .tabs .nav-item {
+    flex: 0 0 auto; /* prevent shrinking */
+  }
+
+  .tabs {
+    text-align: left;
+           margin-left: 10px;
+  }
+
+  .tabs .nav-link {
+    font-size: 14px;
+        padding: 0px 20px 0px 20px;
+ 
+        background-color: #ececec;
+        color: #555555;
+        border-radius: 50px;
+  }
+
+  .tabs .nav-link.active {
+    background-color: #f57723;
+    color: #ffffff;
+    border-radius: 50px;
+  }
+  }
