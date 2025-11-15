@@ -21526,5 +21526,9 @@ font-size: 15px;
     color: #fff;
   }
   }
-
-  
+@media screen and (max-width: 480px) {
+  .tabs .nav {
+    justify-content: center;
+    gap: -0.5rem;
+}
+}
