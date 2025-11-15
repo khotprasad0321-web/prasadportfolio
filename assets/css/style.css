@@ -21565,3 +21565,6 @@ font-size: 15px;
     border-radius: 50px;
   }
   }
+  .aboutmeimg img {
+    width: 100%;
+  }
