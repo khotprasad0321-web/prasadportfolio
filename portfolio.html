@@ -48,7 +48,7 @@
 
     <!-- ================= Sidebar area start here ================= -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
-      <div class="offcanvas-header">
+      <!-- <div class="offcanvas-header">
         <h5 class="offcanvas-title">
           <a class='header__logo' href='index.html'>
             <img src="assets/images/logo.svg" alt="logo" />
@@ -57,7 +57,7 @@
         <button type="button" class="hamburger-menu-close" data-bs-dismiss="offcanvas" aria-label="Close">
           <i class="fa-duotone fa-regular fa-xmark"></i>
         </button>
-      </div>
+      </div> -->
       <div class="offcanvas-menu">
         <!-- Start Mobile Menu -->
         <nav>
@@ -83,246 +83,277 @@
 
     <div id="smooth-wrapper">
       <div id="smooth-content">
+        <header class="header-2 section position-absolute top-0 w-100">
+               <div class="container large-container">
+                  <div class="header__main">
+                     <div class="header-2__left-content">
+                        <!-- <a class='header__logo' href='index.html'>
+                           <img src="assets/images/logo.png" alt="logo" />
+                           </a> -->
+                        <a href="index.html" class="contact-mail">Design By Prasad </a>
+                     </div>
+                     <div class="header__main-menu v2">
+                        <nav class="circle">
+                           <ul>
+                              <li class="">
+                                 <a class='' href='portfolio.html'>View Portfolio</a>
+                              </li>
+                              <li class="orvio__nav-item">
+                                 <a class='orvio__nav-link'href="assets/images/Prasadkhot_resume25.pdf" download="Prasad-Khot-Resume.pdf">Download Resume</a>
+                              </li>
+                           </ul>
+                        </nav>
+                        <div class="menu-btns">
+                           <button class="hamburger-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                           <span class="hamburger-bar"></span>
+                           <span class="hamburger-bar"></span>
+                           <span class="hamburger-bar"></span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
         <main>
           <!--================= breadcrumb section start =================-->
-          <div class="breadcrumb section">
-            <div class="container large-container">
-              <div class="row">
-                <div class="col-12">
-                  <div class="breadcrumb__wrapper">
-                    <div class="breadcrumb__left"></div>
-                    <div class="breadcrumb__nav">
-                      <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                          <li class="breadcrumb-item">
-                            <a href='index.html'>Home</a>
-                          </li>
-                          <li class="breadcrumb-item active" aria-current="page">OUR PORTFOLIO</li>
-                        </ol>
-                      </nav>
-                      <div class="circle-shape">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 130 130" fill="none">
-                          <path d="M65.5 0L65.502 55.4043L71.2969 0.303711L72.292 0.408203L66.5029 55.5088L78.0254 1.31641L78.5146 1.41992L79.0029 1.52441L67.4873 55.7148L84.6104 3.02637L85.5615 3.33594L68.4434 56.0283L90.9814 5.41602L91.4375 5.61914L91.8945 5.82324L69.3613 56.4395L97.0674 8.45801L97.9326 8.95801L70.2344 56.9395L102.802 12.1201L103.61 12.708L71.0459 57.5332L108.122 16.3613L108.493 16.6953L108.865 17.0303L71.8018 58.1973L112.97 21.1348L113.305 21.5068L113.639 21.8779L72.4658 58.9531L117.292 26.3896L117.88 27.1982L73.0596 59.7646L121.042 32.0674L121.542 32.9326L73.5596 60.6377L124.177 38.1055L124.381 38.5625L124.584 39.0186L73.9707 61.5557L126.664 44.4385L126.974 45.3896L74.2842 62.5117L128.476 50.9971L128.58 51.4854L128.684 51.9746L74.4902 63.4961L129.592 57.708L129.696 58.7031L74.5947 64.4971L130 64.5V65.5L74.5947 65.502L129.696 71.2969L129.592 72.292L74.4902 66.5029L128.684 78.0254L128.58 78.5146L128.476 79.0029L74.2842 67.4873L126.974 84.6104L126.664 85.5615L73.9707 68.4434L124.584 90.9814L124.381 91.4375L124.177 91.8945L73.5596 69.3613L121.542 97.0674L121.042 97.9326L73.0596 70.2344L117.88 102.802L117.292 103.61L72.4658 71.0459L113.639 108.122L113.305 108.493L112.97 108.865L71.8018 71.8018L108.865 112.97L108.493 113.305L108.122 113.639L71.0459 72.4658L103.61 117.292L102.802 117.88L70.2344 73.0596L97.9326 121.042L97.0674 121.542L69.3613 73.5596L91.8945 124.177L91.4375 124.381L90.9814 124.584L68.4434 73.9707L85.5615 126.664L84.6104 126.974L67.4873 74.2842L79.0029 128.476L78.5146 128.58L78.0254 128.684L66.5029 74.4902L72.292 129.592L71.2969 129.696L65.502 74.5947L65.5 130H64.5L64.4971 74.5947L58.7031 129.696L57.708 129.592L57.9834 126.974L63.4961 74.4902L51.9746 128.684L51.4854 128.58L50.9971 128.476L51.8672 124.381L62.5117 74.2842L45.3896 126.974L44.4385 126.664L45.1807 124.381L61.5557 73.9707L39.0186 124.584L38.5625 124.381L38.1055 124.177L39.501 121.042L60.6377 73.5596L32.9326 121.542L32.0674 121.042L59.7646 73.0596L27.1982 117.88L26.3896 117.292L29.0439 113.639L58.9531 72.4658L21.8779 113.639L21.5068 113.305L21.1348 112.97L58.1973 71.8018L17.0303 108.865L16.6953 108.493L16.3613 108.122L57.5332 71.0459L12.708 103.61L12.1201 102.802L56.9395 70.2344L8.95801 97.9326L8.45801 97.0674L56.4395 69.3613L5.82324 91.8945L5.61914 91.4375L5.41602 90.9814L56.0283 68.4434L3.33594 85.5615L3.18164 85.0859L3.02637 84.6104L55.7148 67.4873L1.52441 79.0029L1.41992 78.5146L1.31641 78.0254L55.5088 66.5029L0.408203 72.292L0.303711 71.2969L55.4043 65.502L0 65.5L0 64.5L55.4043 64.4971L0.303711 58.7031L0.408203 57.708L55.5088 63.4961L1.31641 51.9746L1.41992 51.4854L1.52441 50.9971L55.7148 62.5117L3.02637 45.3896L3.33594 44.4385L56.0283 61.5557L5.41602 39.0186L5.61914 38.5625L5.82324 38.1055L56.4395 60.6377L8.45801 32.9326L8.95801 32.0674L56.9395 59.7646L12.1201 27.1982L12.708 26.3896L57.5332 58.9531L16.3613 21.8779L16.6953 21.5068L17.0303 21.1348L58.1973 58.1973L21.1348 17.0303L21.5068 16.6953L21.8779 16.3613L58.9531 57.5332L26.3896 12.708L27.1982 12.1201L59.7646 56.9395L32.0674 8.95801L32.9326 8.45801L60.6377 56.4395L38.1055 5.82324L38.5625 5.61914L39.0186 5.41602L61.5557 56.0283L44.4385 3.33594L45.3896 3.02637L62.5117 55.7148L50.9971 1.52441L51.4854 1.41992L51.9746 1.31641L63.4961 55.5088L57.708 0.408203L58.7031 0.303711L64.4971 55.4043L64.5 0L65.5 0Z" fill="currentColor" stroke="currentColor" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="breadcrumb__right">
-                      <div class="content-box">
-                        <h1 class="breadcrumb-title char-anim">OUR recent Works</h1>
-                      </div>
-                      <div class="lines" data-gaps="8"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+         
           <!--================= breadcrumb section end =================-->
 
           <!--================= work section start =================-->
-          <section class="gallary-main mt-4">
-
-    <div class="row">
+          <section class="gallary-main mt-4 topsectionpadd">
+            <div class="container">
+              <div class="row">
         <div class="tabs text-center mb-4 p-0">
           <ul class="nav p-0">
             <li class="nav-item"><a href="#" class="nav-link active" data-filter="all">All</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" data-filter="ae-motion">AE Motion Design</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" data-filter="figma-animations">Figma Animations</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" data-filter="static-web">Static Web-Designs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" data-filter="mobile-ui">Mobile UI</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" data-filter="ui-development">UI Development</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-filter="festival">Festival</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-filter="logo">Logo</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-filter="marathibanner">Marathi Banner</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-filter="mobileapp">Mobile App</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-filter="posterdesign">Poster Design</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-filter="socialmedia">Social Media Post</a></li>
           </ul>
         </div>
         
         <!-- Gallery Images -->
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="ae-motion">
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="festival">
             <section class="work-section">
                 <div class="video-container-nopadding position-relative" >
                 <img style="border: none;" src="assets/images/portfolio/Festival Post/f1.jpg" alt="">
                 </div>
             </section>
         </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="ae-motion">
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="festival">
             <section class="work-section">
                 <div class="video-container-nopadding position-relative" >
                 <img style="border: none;" src="assets/images/portfolio/Festival Post/f2.jpg" alt="">
                 </div>
             </section>
         </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="ae-motion">
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="festival">
             <section class="work-section">
                 <div class="video-container-nopadding position-relative" >
                 <img style="border: none;" src="assets/images/portfolio/Festival Post/f3.jpg" alt="">
                 </div>
             </section>
         </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="ae-motion">
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="festival">
             <section class="work-section">
                 <div class="video-container-nopadding position-relative" >
                 <img style="border: none;" src="assets/images/portfolio/Festival Post/f4.jpg" alt="">
                 </div>
             </section>
         </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="ae-motion">
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="festival">
             <section class="work-section">
                 <div class="video-container-nopadding position-relative" >
                 <img style="border: none;" src="assets/images/portfolio/Festival Post/f5.jpg" alt="">
                 </div>
             </section>
         </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="ae-motion">
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="festival">
             <section class="work-section">
                 <div class="video-container-nopadding position-relative" >
                 <img style="border: none;" src="assets/images/portfolio/Festival Post/f6.jpg" alt="">
                 </div>
             </section>
-        </div>
-
-
+        </div>  
         
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="static-web">
+        
+
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="logo">
             <section class="work-section  ">
                 <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="assets/images/portfolio/Festival Post/f2.jpg" alt="">
+                <img style="border: none;" src="assets/images/portfolio/Logo/logo1.jpg" alt="">
                 </div>
             </section>
         </div>
-        <div class=" mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="figma-animations">
-            <section class="work-section">
-                <div class=" video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/gifs/amul-tru.gif" alt="">
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="logo">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Logo/logo2.png" alt="">
                 </div>
             </section>
         </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="logo">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Logo/logo3.png" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="logo">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Logo/logo4.png" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="logo">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Logo/logo5.png" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="logo">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Logo/logo6.png" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="logo">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Logo/logo7.jpg" alt="">
+                </div>
+            </section>
+        </div>
+
+
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="marathibanner">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Marathi banner/marathibanner1.jpg" alt="">
+                </div>
+            </section>
+        </div>
+         <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="marathibanner">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Marathi banner/marathibanner2.jpg" alt="">
+                </div>
+            </section>
+        </div>
+         <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="marathibanner">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Marathi banner/marathibanner3.jpg" alt="">
+                </div>
+            </section>
+        </div>
+
+         <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="mobileapp">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Mobile App/mapp1.jpg" alt="">
+                </div>
+            </section>
+        </div>
+         <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="mobileapp">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Mobile App/mapp2.jpg" alt="">
+                </div>
+            </section>
+        </div>
+
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="posterdesign">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Poster Design/poster1.jpg" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="posterdesign">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Poster Design/poster2.jpg" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="posterdesign">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Poster Design/poster3.jpg" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="posterdesign">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Poster Design/poster4.jpg" alt="">
+                </div>
+            </section>
+        </div>
+
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="socialmedia">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Social Media/sc1.jpg" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="socialmedia">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Social Media/sc2.jpg" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="socialmedia">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Social Media/sc3.jpg" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="socialmedia">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Social Media/sc4.jpg" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="socialmedia">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Social Media/sc5.jpg" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="socialmedia">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Social Media/sc6.jpg" alt="">
+                </div>
+            </section>
+        </div>
+        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="socialmedia">
+            <section class="work-section  ">
+                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
+                <img style="border: none;" src="assets/images/portfolio/Social Media/sc7.jpg" alt="">
+                </div>
+            </section>
+        </div>
+
+
         
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4  " data-category="static-web">
-            <section class="work-section ">
-                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/villa.jpg" alt="">
-                </div>
-            </section>
-        </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="figma-animations">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none; object-fit: contain; background-color: #000;" src="imgs/gifs/text-mask.gif" alt="">
-                </div>
-            </section>
-        </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4" data-category="static-web">
-            <section class="work-section ">
-                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/real-estate.png" alt="">
-                </div>
-            </section>
-        </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4" data-category="figma-animations">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/gifs/dermalcare.gif" alt="">
-                </div>
-            </section>
-        </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 mt-4" data-category="static-web">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/ev.png" alt="">
-                </div>
-            </section>
-        </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4" data-category="figma-animations">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/gifs/furniture store.gif" alt="">
-                </div>
-            </section>
-        </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="static-web">
-            <section class="work-section ">
-                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/LeafLuxe.png" alt="">
-                </div>
-            </section>
-        </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="figma-animations">
-            <section class="work-section ">
-                <div class="video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/gifs/hecoll.gif" alt="">
-                </div>
-            </section>
-        </div>
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4  " data-category="mobile-ui">
-            <section class="work-section rounded-4 me-4">
-                <div class="rounded-4 video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/profile-redesign.jpg" alt="">
-                </div>
-            </section>
-        </div>
-
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="figma-animations">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #000000; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;  object-fit: contain;" src="imgs/gifs/kreo.gif" alt="">
-                </div>
-            </section>
-        </div>
-
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="static-web">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/yoga.png" alt="">
-                </div>
-            </section>
-        </div>
-
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4 " data-category="static-web">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/gifs/bento-grid.gif" alt="">
-                </div>
-            </section>
-        </div>
-        
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4" data-category="static-web">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/ace-aptitude.png" alt="">
-                </div>
-            </section>
-        </div>
-
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4" data-category="figma-animations">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #333333; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none; object-fit: contain; padding: 0 0.8rem;" src="imgs/gifs/game-web.gif" alt="">
-                </div>
-            </section>
-        </div>
-
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4" data-category="static-web">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none;" src="imgs/school.png" alt="">
-                </div>
-            </section>
-        </div>
-
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4" data-category="figma-animations">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #000000; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none; object-fit: contain; padding: 0 0.8rem;" src="imgs/gifs/anime.gif" alt="">
-                </div>
-            </section>
-        </div>
-
-        <div class="mobile-view-card img-vid-container col-sm-12 col-md-6 col-lg-4" data-category="mobile-ui">
-            <section class="work-section ">
-                <div class=" video-container-nopadding position-relative" style="background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.1);">
-                <img style="border: none; " src="imgs/UTS-redesign-img.jpg" alt="">
-                </div>
-            </section>
-        </div>
     </div>
+
+            </div>
+    
     
   </section>
           <!--================= work section end =================-->

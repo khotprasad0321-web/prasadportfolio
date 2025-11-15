@@ -7461,7 +7461,7 @@ header {
   top: 0;
   width: 14px;
   height: 100%;
-  background-color: var(--color-primary2);
+  /* background-color: var(--color-primary2); */
   -webkit-transform: translateX(-100px);
   -ms-transform: translateX(-100px);
   transform: translateX(-100px);
@@ -21417,7 +21417,7 @@ font-size: 15px;
         }
 
         .topsectionpadd {
-          padding-top: 8%;
+          padding-top: 6%;
         }
 
         @media screen and (max-width: 480px) {
@@ -21503,4 +21503,28 @@ font-size: 15px;
 
 .tabs .nav-link.active {
     font-weight: 600;}
+
+
+  .newsectionindex h1{
+ font-size: 70px;
+ color: #fff;
+  }
+  .newsectionindex h2{
+    font-size: 46px;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 480px) {
+    .newsectionindex h1{
+ font-size: 30px;
+ color: #fff;
+  }
+  }
+  @media screen and (max-width: 480px) {
+    .newsectionindex h2{
+    font-size: 20px;
+    color: #fff;
+  }
+  }
+
   
