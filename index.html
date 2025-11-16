@@ -666,27 +666,34 @@
     setTimeout(() => introScreen.remove(), 800);
   });
 </script>
-<script>document.getElementById("continueBtn").addEventListener("click", function () {
-    const name = document.getElementById("userName").value.trim();
-    const userType = document.getElementById("userType").value;
-    const company = document.getElementById("companyName").value.trim();
+<<script>
+  // Initialize EmailJS
+  (function(){
+    emailjs.init("BltUOn8cmfkTWn3EF"); // example: "jO92nsd_XYZ"
+  })();
 
-    if (!name || !userType) {
-        alert("Please fill required fields");
-        return;
-    }
+  document.getElementById("continueBtn").addEventListener("click", function () {
+      const name = document.getElementById("userName").value.trim();
+      const userType = document.getElementById("userType").value;
+      const company = document.getElementById("companyName").value.trim();
 
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-        user_name: name,
-        user_type: userType,
-        company_name: company || "N/A"
-    })
-    .then(function() {
-        alert("Message sent to your email!");
-    }, function(error) {
-        alert("Failed: " + error);
-    });
-});</script>
+      if (!name || !userType) {
+          alert("Please fill in all required fields");
+          return;
+      }
+
+      emailjs.send("service_31ozs0x", "template_u6th93n", {
+          user_name: name,
+          user_type: userType,
+          company_name: company || "Not Provided",
+      })
+      .then(function() {
+          alert("Form submitted successfully! You will receive an email.");
+      }, function(error) {
+          alert("Error: " + JSON.stringify(error));
+      });
+  });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   (function(){
