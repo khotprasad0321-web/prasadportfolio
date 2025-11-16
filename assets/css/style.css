@@ -21116,7 +21116,8 @@ font-size: 15px;
     /* skills */
 
     .skills-section {
-      padding: 60px 0;
+      /* padding: 60px 0; */
+    padding: 24px;
     }
     .skill-card {
       border: 1px solid #eee;
@@ -21423,7 +21424,7 @@ ease;
 
         @media screen and (max-width: 480px) {
  .topsectionpadd {
-          padding-top: 13%;
+          padding-top: 25%;
         }
 }
 .features-card {
