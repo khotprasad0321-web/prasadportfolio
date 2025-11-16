@@ -605,6 +605,8 @@
 
      <!-- ====== Intro Screen Start ====== -->
 <!-- YOUR EXISTING HTML -->
+<div id="successMsg" class="success-popup">Thank you! Form submitted successfully.</div>
+
 <div id="introScreen" class="intro-screen d-flex align-items-center justify-content-center">
 
   <div class="intro-bg-shape shape-1"></div>
@@ -643,8 +645,9 @@
   const continueBtn = document.getElementById('continueBtn');
   const userType = document.getElementById('userType');
   const companyNameField = document.getElementById('companyName');
+  const successMsg = document.getElementById('successMsg');
 
-  // Show/Hide company name input based on selection
+  // Show/Hide company name input
   userType.addEventListener('change', () => {
     if (userType.value === 'Company HR') {
       companyNameField.classList.remove('d-none');
@@ -675,9 +678,14 @@
         company_name: company || "Not Provided",
     })
     .then(() => {
-        alert("Form submitted successfully! Check your Gmail.");
+
+        /* SHOW GREEN SUCCESS POPUP */
+        successMsg.classList.add("show");
+
+        /* CLOSE INTRO SCREEN */
         introScreen.classList.add('intro-hide');
         setTimeout(() => introScreen.remove(), 800);
+
     })
     .catch(error => {
         alert("Email Error: " + JSON.stringify(error));

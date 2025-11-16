@@ -21570,3 +21570,36 @@ ease;
   .aboutmeimg img {
     width: 100%;
   }
+
+  .success-popup {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #28a745;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    display: none;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+    z-index: 9999;
+  }
+
+  .success-popup.show {
+    display: block;
+    animation: fadeOut 3s forwards;
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .intro-hide {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: 0.8s ease;
+  }
