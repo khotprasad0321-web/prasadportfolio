@@ -604,6 +604,7 @@
       </div>
 
      <!-- ====== Intro Screen Start ====== -->
+<!-- YOUR EXISTING HTML -->
 <div id="introScreen" class="intro-screen d-flex align-items-center justify-content-center">
 
   <div class="intro-bg-shape shape-1"></div>
@@ -616,7 +617,7 @@
 
     <input type="text" id="userName" class="form-control intro-input mb-3" placeholder="Your Name">
 
-    <select id="userType" class="form-select intro-input mb-3 ">
+    <select id="userType" class="form-select intro-input mb-3">
       <option value="">How did you find me?</option>
       <option value="Friend">Friend</option>
       <option value="Recruiter">Recruiter</option>
@@ -630,6 +631,12 @@
   </div>
 </div>
 
+<!-- LOAD EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("BltUOn8cmfkTWn3EF"); // your public key
+</script>
 
 <script>
   const introScreen = document.getElementById('introScreen');
@@ -637,7 +644,7 @@
   const userType = document.getElementById('userType');
   const companyNameField = document.getElementById('companyName');
 
-  // Show/Hide company name input
+  // Show/Hide company name input based on selection
   userType.addEventListener('change', () => {
     if (userType.value === 'Company HR') {
       companyNameField.classList.remove('d-none');
@@ -646,7 +653,6 @@
     }
   });
 
-  // Continue button logic
   continueBtn.addEventListener('click', () => {
     const name = document.getElementById('userName').value.trim();
     const type = userType.value;
@@ -662,44 +668,24 @@
       return;
     }
 
-    introScreen.classList.add('intro-hide');
-    setTimeout(() => introScreen.remove(), 800);
+    // SEND EMAIL
+    emailjs.send("service_41xyone", "template_u6th93n", {
+        user_name: name,
+        user_type: type,
+        company_name: company || "Not Provided",
+    })
+    .then(() => {
+        alert("Form submitted successfully! Check your Gmail.");
+        introScreen.classList.add('intro-hide');
+        setTimeout(() => introScreen.remove(), 800);
+    })
+    .catch(error => {
+        alert("Email Error: " + JSON.stringify(error));
+    });
   });
 </script>
-<<script>
-  // Initialize EmailJS
-  (function(){
-    emailjs.init("BltUOn8cmfkTWn3EF"); // example: "jO92nsd_XYZ"
-  })();
 
-  document.getElementById("continueBtn").addEventListener("click", function () {
-      const name = document.getElementById("userName").value.trim();
-      const userType = document.getElementById("userType").value;
-      const company = document.getElementById("companyName").value.trim();
 
-      if (!name || !userType) {
-          alert("Please fill in all required fields");
-          return;
-      }
-
-      emailjs.send("service_31ozs0x", "template_u6th93n", {
-          user_name: name,
-          user_type: userType,
-          company_name: company || "Not Provided",
-      })
-      .then(function() {
-          alert("Form submitted successfully! You will receive an email.");
-      }, function(error) {
-          alert("Error: " + JSON.stringify(error));
-      });
-  });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("YOUR_PUBLIC_KEY");
-  })();
-</script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <!-- <a href="https://api.whatsapp.com/send?phone=8689869351&text=Hello Prasad, this is [Your Name], the Hiring Manager from [Company Name]. I came across your profile and would like to discuss a potential opportunity with you. Please let me know a suitable time to connect." class="float" target="_blank">
