@@ -21,9 +21,11 @@ if (isset($_POST['submitIntro'])) {
     $headers .= "From: Portfolio Form <no-reply@yourdomain.com>\r\n";
 
     if (mail($to, $subject, $message, $headers)) {
-        echo "Email Sent";
+        echo "Email Sent Successfully!";
     } else {
         echo "Failed to send email";
     }
+} else {
+    echo "Invalid Request";
 }
 ?>

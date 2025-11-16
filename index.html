@@ -625,10 +625,6 @@
 <!-- ====== Intro Screen End ====== -->
 <form id="introForm" method="POST">
 <div id="introScreen" class="intro-screen d-flex align-items-center justify-content-center">
-  <!-- Animated background shapes -->
-  <div class="intro-bg-shape shape-1"></div>
-  <div class="intro-bg-shape shape-2"></div>
-  <div class="intro-bg-shape shape-3"></div>
 
   <div class="intro-screen-box text-center p-4">
     <h2 class="intro-screen-title mb-3">Welcome 👋</h2>
@@ -648,20 +644,19 @@
            class="form-control intro-input mb-3 d-none"
            placeholder="Enter Company Name">
 
-    <!-- Hidden action -->
     <input type="hidden" name="submitIntro" value="1">
 
     <button id="continueBtn" class="btn intro-btn w-100 fw-semibold" type="button">Continue</button>
   </div>
 </div>
 </form>
+
 <script>
 const introScreen = document.getElementById('introScreen');
 const continueBtn = document.getElementById('continueBtn');
 const userType = document.getElementById('userType');
 const companyNameField = document.getElementById('companyName');
 
-// Show/Hide company name input
 userType.addEventListener('change', () => {
   if (userType.value === 'Company HR') {
     companyNameField.classList.remove('d-none');
@@ -687,7 +682,6 @@ continueBtn.addEventListener('click', () => {
     return;
   }
 
-  // AJAX SEND
   let formData = new FormData(document.getElementById('introForm'));
 
   fetch("send_intro_email.php", {
@@ -697,6 +691,8 @@ continueBtn.addEventListener('click', () => {
   .then(res => res.text())
   .then(response => {
     console.log(response);
+
+    alert(response);
 
     introScreen.classList.add('intro-hide');
     setTimeout(() => introScreen.remove(), 800);
