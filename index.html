@@ -609,7 +609,7 @@
 
     <input type="text" id="userName" class="form-control intro-input mb-3" placeholder="Your Name">
 
-    <select id="userType" class="form-select intro-input mb-3">
+    <select id="userType" class="form-select intro-input mb-3 ">
       <option value="">How did you find me?</option>
       <option value="Friend">Friend</option>
       <option value="Recruiter">Recruiter</option>
@@ -619,62 +619,10 @@
 
     <input type="text" id="companyName" class="form-control intro-input mb-3 d-none" placeholder="Enter Company Name">
 
-    <button onclick="saveIntroData()" class="btn intro-btn w-100 fw-semibold">Continue</button>
-
+    <button id="continueBtn" class="btn intro-btn w-100 fw-semibold">Continue</button>
   </div>
 </div>
 <!-- ====== Intro Screen End ====== -->
-
-<script type="module">
-  // Import Firebase SDK
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js";
-
-  // Your Firebase config (from your screenshot)
-  const firebaseConfig = {
-    apiKey: "AIzaSyAiye5i2uur1ISvuZICrig74-y4K6vGGA",
-    authDomain: "portfolio-12cdc.firebaseapp.com",
-    projectId: "portfolio-12cdc",
-    storageBucket: "portfolio-12cdc.firebasestorage.app",
-    messagingSenderId: "953739455484",
-    appId: "1:953739455484:web:95611c5d1a6290cb086079",
-    measurementId: "G-6SNXYK978R"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  // Save popup data (function called on button)
-  window.saveIntroData = async function () {
-    const name = document.getElementById("userName").value.trim();
-    const userType = document.getElementById("userType").value;
-    const company = document.getElementById("companyName").value.trim();
-
-    if (!name || !userType) {
-      alert("Please fill required fields.");
-      return;
-    }
-
-    try {
-      await addDoc(collection(db, "introPopupUsers"), {
-        name: name,
-        userType: userType,
-        companyName: company || "",
-        timestamp: new Date()
-      });
-
-      console.log("Data saved to Firestore ✔");
-
-      // Close popup
-      document.getElementById("introScreen").style.display = "none";
-
-    } catch (error) {
-      console.error("Error writing document: ", error);
-    }
-  };
-</script>
-
 
 <script>
   const introScreen = document.getElementById('introScreen');
