@@ -21603,3 +21603,49 @@ ease;
     transform: scale(0.9);
     transition: 0.8s ease;
   }
+
+  .skill-box {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    transition: all 0.35s ease;
+    background: #fff;
+        margin-bottom: 24px; /* More space for label below */
+}
+
+.skill-box img {
+    width: 40px;
+    transition: transform 0.35s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.skill-box:hover img {
+    transform: scale(1.15);
+}
+
+/* Label stays far below the box */
+.skill-label {
+    position: absolute;
+    left: 50%;
+    bottom: -45px;   /* Push label far below the card */
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.skill-box:hover .skill-label {
+    opacity: 1;
+        bottom: -52px;   /* Animates upward but still clearly outside */
+}
